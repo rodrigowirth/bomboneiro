@@ -5,11 +5,11 @@
 #define lightPin A5
 HX711 scale(A1, A0);
 
-int foutainPin = 13;
-bool replacing = false;
-int initialDelayForStartReading = 60000;//60 seconds
-int alarmDuration = 15000;//15 seconds
-int changeGaloonWaitingTime = 600000;//10 minutes
+const int foutainPin = 13;
+const bool replacing = false;
+const long initialDelayForStartReading = 60000;//60 seconds
+const long alarmDuration = 15000;//15 seconds
+const long changeGaloonWaitingTime = 600000;//10 minutes
 int alarmCount = 0;
 
 void setup() {
