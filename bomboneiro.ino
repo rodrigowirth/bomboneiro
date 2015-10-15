@@ -19,7 +19,8 @@ void setup() {
   pinMode(ledPin, OUTPUT);
   pinMode(foutainPin, OUTPUT);
   pinMode(lightPin, INPUT);
-  
+
+  pinMode(foutainPin, HIGH);
   digitalWrite(ledPin, HIGH);
   
   Serial.println("HX711 Demo");
@@ -83,9 +84,13 @@ void loop()
     if(alarmCount >3)
     {
       digitalWrite(ledPin, HIGH);
+      Serial.println("Start Alarm!! ");
       delay(alarmDuration);
+      
       digitalWrite(ledPin, LOW); 
+      Serial.println("Start Waiting time...");
       delay(changeGaloonWaitingTime);
+      
       alarmCount =0;
     }
   }
@@ -100,10 +105,12 @@ void loop()
   Serial.print(light , 2);
   if(light > 20)
   {
+    Serial.println("Turn on fountain!! ");
     digitalWrite(foutainPin,HIGH);
   }
   else
   {
+    Serial.println("Turn off fountain!! ");
     digitalWrite(foutainPin,LOW);
   }
   
