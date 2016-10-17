@@ -1,5 +1,4 @@
-# bomboneiro
-Bomboneio Project
+#Bomboneiro
 
 The Bomboneiro project was created for learning "Internet of Things". Its aim was to identify and warn when the water “bombona” has to be replaced, which means, when there is no more water. In this project we used an Arduino with some peripherals. The biggest challenge was not the software, it was the hardware. Some options was studied before we find a way to measure how much water has in the “bombona”.
 
